@@ -1,22 +1,31 @@
+<h1 class="text-center pt-4">Update Recipe : </h1>
 <form (ngSubmit)="onSubmit()" class="w-[27rem] p-6 rounded-lg shadow-md">
     <div class="mb-4">
         <mat-form-field class="w-full">
             <mat-label class="text-gray-200">Title</mat-label>
-            <input matInput placeholder="Ex. Pizza" value="" name="title" [(ngModel)]="recipeItem.title"
-                class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline">
+            <input matInput 
+            placeholder="Ex. Pizza" 
+            value="recipeItem.title" 
+            name="title" 
+            [(ngModel)]="recipeItem.title"
+            class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline">
         </mat-form-field>
     </div>
 
     <div class="mb-4">
         <mat-form-field class="w-full">
             <mat-label class="text-gray-200">Description</mat-label>
-            <input matInput placeholder="Description..." value="" name="description"
-                [(ngModel)]="recipeItem.description" class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline">
+            <input matInput 
+            placeholder="Description..." 
+            value="recipeItem.description" 
+            name="description"
+            [(ngModel)]="recipeItem.description" 
+            class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline">
         </mat-form-field>
     </div>
 
     <div class="mb-4">
-        <mat-radio-group name="foodType" [(ngModel)]="recipeItem.foodType" aria-label="Select an option">
+        <mat-radio-group name="foodType" value="recipeItem.foodType" [(ngModel)]="recipeItem.foodType" aria-label="Select an option">
             <mat-radio-button value="veg">Vegetarian</mat-radio-button>
             <mat-radio-button value="non_veg">Non-Vegetarian</mat-radio-button>
         </mat-radio-group>
@@ -25,8 +34,12 @@
     <div class="mb-4">
         <mat-form-field class="w-full">
             <mat-label class="text-gray-200">Image</mat-label>
-            <input matInput placeholder="image url" value="" name="image" [(ngModel)]="recipeItem.image"
-                class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline">
+            <input matInput 
+            placeholder="image url" 
+            value="recipeItem.image" 
+            name="image" 
+            [(ngModel)]="recipeItem.image"
+            class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline">
         </mat-form-field>
     </div>
 

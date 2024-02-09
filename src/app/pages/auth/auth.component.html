@@ -1,6 +1,6 @@
 <div class="flex justify-center h-screen items-center overflow-hidden">
     <div class="container">
-        <div class="cover" [ngClass]="{'route-active':isRegister}">
+        <div class="cover" [ngClass]="{'rotate-active':isRegister}">
             <div class="front">
                 <img src="https://images.pexels.com/photos/826349/pexels-photo-826349.jpeg?auto=compress&cs=tinysrgb&w=600"
                     alt="">
@@ -18,7 +18,7 @@
             <div class="form-content h-full">
                 <div class="login-form">
                     <h1 class="text-lg font-bold text-center pb-8">Signup</h1>
-                    <form [FormGroup]="registerForm" (ngSubmit)="handleRegister()" class="">
+                    <form [formGroup]="registerForm" (ngSubmit)="handleRegister()" class="">
                         <div class="mb-4">
                             <mat-form-field class="w-full">
                                 <mat-label class="text-gray-200">Full name</mat-label>
@@ -45,8 +45,36 @@
                         </div>
 
                         <div>
-                            <button mat-raised-button type="submit" color="primary">
-                                Create
+                            <button class="w-full" mat-raised-button type="submit" color="primary">
+                                Register
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="signup-form">
+                    <h1 class="text-lg font-bold text-center pb-8">Login</h1>
+                    <form [formGroup]="loginForm" (ngSubmit)="handleLogin()" class="">
+
+                        <div class="mb-4">
+                            <mat-form-field class="w-full">
+                                <mat-label class="text-gray-200">email</mat-label>
+                                <input matInput formControlName="email"
+                                class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline">
+                            </mat-form-field>
+                        </div>
+
+                        <div class="mb-4">
+                            <mat-form-field class="w-full">
+                                <mat-label class="text-gray-200">Password</mat-label>
+                                <input matInput  formControlName="password"
+                                class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline">
+                            </mat-form-field>
+                        </div>
+
+                        <div>
+                            <button class="w-full" mat-raised-button type="submit" color="primary">
+                                Login
                             </button>
                         </div>
                     </form>

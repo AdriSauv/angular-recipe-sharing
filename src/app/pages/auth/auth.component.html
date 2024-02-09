@@ -49,12 +49,15 @@
                                 Register
                             </button>
                         </div>
+                        <div class="flex items-center gap-2 justify-items-center mt-9">
+                            Already have an account ? <button (click)="togglePanel()" color="primary" mat-button>signin</button>
+                        </div>
                     </form>
                 </div>
 
                 <div class="signup-form">
                     <h1 class="text-lg font-bold text-center pb-8">Login</h1>
-                    <form [formGroup]="loginForm" (ngSubmit)="handleLogin()" class="">
+                    <form [formGroup]="loginForm" (ngSubmit)="handleLogin()">
 
                         <div class="mb-4">
                             <mat-form-field class="w-full">
@@ -78,7 +81,12 @@
                             </button>
                         </div>
                     </form>
+                    <div class="flex items-center gap-2 justify-items-center mt-9">
+                        Don't have an account ? <button (click)="togglePanel()" color="primary" mat-button>signup</button>
+                    </div>
                 </div>
+
+                
             </div>
         </div>
     </div>

@@ -20,7 +20,7 @@ import { MatRadioModule } from '@angular/material/radio';
   styleUrl: './auth.component.scss'
 })
 export class AuthComponent {
-  isRegister = false;
+  isRegister = true;
 
   registerForm = new FormGroup({
     fullName: new FormControl("", [Validators.required]),
@@ -39,5 +39,9 @@ export class AuthComponent {
 
   handleLogin(){
     console.log("login ",this.loginForm.value);
+  }
+
+  togglePanel(){
+    this.isRegister = !this.isRegister;
   }
 }

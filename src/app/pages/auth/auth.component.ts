@@ -29,15 +29,15 @@ export class AuthComponent {
   })
 
   loginForm = new FormGroup({
-    email: new FormControl("", [Validators.required, Validators.email]),
-    password: new FormControl("", [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required]),
   })
 
   handleRegister(){
-    console.log("Register ", this.registerForm);
+    console.log("Register ", this.registerForm.value);
   }
 
   handleLogin(){
-    console.log("login ",this.loginForm);
+    console.log("login ",this.loginForm.value);
   }
 }
